@@ -22,7 +22,7 @@ std::pair<int,std::vector<std::vector<int>>> readFromFile(std::string fileName)
             rows++;
             if (rows > 9) { std::cout << "ERROR"; return { 1, solution }; }
             number.erase(std::remove_if(number.begin(), number.end(), ::isspace), number.end());
-            // Checking i there is more than 9 columns.
+            // Checking if there is more than 9 columns.
             if (number.length() == 9)
             {
                 for (int i = 0; i < number.length(); i++)
