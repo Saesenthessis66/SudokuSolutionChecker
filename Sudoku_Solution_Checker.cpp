@@ -35,10 +35,13 @@ std::pair<int,std::vector<std::vector<int>>> readFromFile(std::string fileName)
                     else { std::cout << "ERROR"; return { 1,solution }; }
                 }
             }
-            else { std::cout << "ERROR"; return {1, solution };
-        }
+            else { std::cout << "ERROR"; return {1, solution };}
             solution.push_back(row);
             row.clear();
+        }
+        if (rows < 9)
+        {
+            std::cout << "ERROR"; return { 1, solution };
         }
     }
     else { std::cout << "ERROR"; return { 1, solution }; }
